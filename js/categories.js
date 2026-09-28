@@ -1,0 +1,11 @@
+export const categories = [
+  { id:'animais', name:'Animais', icon:'🐾', items:[['Leão','🦁'],['Elefante','🐘'],['Girafa','🦒'],['Macaco','🐒'],['Tubarão','🦈'],['Pinguim','🐧'],['Cachorro','🐶'],['Gato','🐱'],['Cobra','🐍'],['Jacaré','🐊'],['Cavalo','🐴'],['Coruja','🦉'],['Polvo','🐙'],['Urso','🐻'],['Coelho','🐰']]},
+  { id:'filmes', name:'Filmes e Séries', icon:'🎬', items:[['Titanic','🚢'],['Vingadores','🦸'],['Harry Potter','⚡'],['Stranger Things','🚲'],['Toy Story','🤠'],['Jurassic Park','🦖'],['Matrix','💊'],['Frozen','❄️'],['Shrek','🟢'],['Star Wars','🌌'],['Breaking Bad','🧪'],['The Walking Dead','🧟'],['Round 6','🔺'],['Game of Thrones','🐉'],['Homem-Aranha','🕷️']]},
+  { id:'personagens', name:'Personagens', icon:'🎭', items:[['Batman','🦇'],['Superman','🦸'],['Homem-Aranha','🕷️'],['Hulk','💚'],['Mario','🍄'],['Sonic','💨'],['Mickey Mouse','🐭'],['Goku','🐉'],['Deadpool','🔴'],['Wolverine','🟡'],['Elsa','❄️'],['Darth Vader','🌌'],['Shrek','🟢'],['Pikachu','⚡'],['Scooby-Doo','🐕']]},
+  { id:'comidas', name:'Comidas', icon:'🍕', items:[['Pizza','🍕'],['Hambúrguer','🍔'],['Sushi','🍣'],['Churrasco','🥩'],['Sorvete','🍦'],['Chocolate','🍫'],['Pipoca','🍿'],['Lasanha','🍝'],['Coxinha','🍗'],['Brigadeiro','🍬'],['Pastel','🥟'],['Hot Dog','🌭'],['Bolo','🎂'],['Batata Frita','🍟'],['Taco','🌮']]},
+  { id:'profissoes', name:'Profissões', icon:'💼', items:[['Médico','🩺'],['Professor','📚'],['Bombeiro','🚒'],['Policial','👮'],['Programador','💻'],['Cozinheiro','👨‍🍳'],['Dentista','🦷'],['Piloto','✈️'],['Astronauta','🚀'],['Advogado','⚖️'],['Mecânico','🔧'],['Fotógrafo','📷'],['Veterinário','🐾'],['Arquiteto','📐'],['Eletricista','⚡']]},
+  { id:'games', name:'Games', icon:'🎮', items:[['Minecraft','⛏️'],['Fortnite','🪂'],['GTA','🚗'],['Mario Kart','🏎️'],['The Sims','💎'],['Pokémon','⚡'],['God of War','🪓'],['Resident Evil','🧟'],['Mortal Kombat','🥊'],['Counter-Strike','🎯'],['League of Legends','⚔️'],['Among Us','🚀'],['Valheim','🛡️'],['DayZ','🧟'],['Sonic','💨']]}
+];
+
+export function getCategory(id){ return categories.find(category => category.id === id); }
+export function shuffled(items){ return [...items].sort(() => Math.random() - 0.5); }
