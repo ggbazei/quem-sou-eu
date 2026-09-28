@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <title>Quem Sou Eu?</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="app" class="app">
+    <section id="home-screen" class="screen active">
+      <div class="hero"><span class="hero-icon">🤔</span><h1>Quem Sou Eu?</h1><p>Escolha uma categoria, coloque o celular na testa e tente adivinhar!</p></div>
+      <h2>Categorias</h2><div id="category-list" class="category-grid"></div>
+    </section>
+    <section id="setup-screen" class="screen">
+      <button class="back-button" data-action="home">← Voltar</button>
+      <div class="panel"><div id="selected-category-icon" class="big-icon">🎭</div><h1 id="selected-category-name">Categoria</h1><p id="selected-category-count" class="muted"></p>
+        <h2>Tempo da rodada</h2><div class="option-row" id="time-options"><button class="option" data-time="30">30s</button><button class="option selected" data-time="60">60s</button><button class="option" data-time="90">90s</button></div>
+        <h2>Controle</h2><div class="option-row" id="control-options"><button class="option selected" data-control="touch">👆 Toque</button><button class="option" data-control="motion">📱 Movimento</button></div>
+        <button id="start-button" class="primary-button">Começar</button></div>
+    </section>
+    <section id="ready-screen" class="screen game-screen"><div class="center-content"><div class="phone-icon">📱</div><h1>Coloque o celular na testa</h1><p>Não olhe para a tela!</p><div id="countdown" class="countdown">3</div></div></section>
+    <section id="play-screen" class="screen game-screen play-screen"><header class="game-header"><span id="game-category"></span><strong id="timer">60</strong></header><div id="card" class="game-card"><span id="card-emoji" class="card-emoji"></span><h1 id="card-word"></h1></div><div class="game-actions"><button id="skip-button" class="game-action skip">Pular</button><button id="correct-button" class="game-action correct">Acertou!</button></div></section>
+    <section id="result-screen" class="screen"><div class="panel results-panel"><div class="big-icon">🏆</div><h1>Fim da rodada!</h1><div class="score"><strong id="correct-count">0</strong><span>acertos</span></div><div id="result-list" class="result-list"></div><button id="play-again-button" class="primary-button">Jogar novamente</button><button class="secondary-button" data-action="home">Escolher outra categoria</button></div></section>
+  </main>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
